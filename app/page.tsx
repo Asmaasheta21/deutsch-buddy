@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Brain, Layers, BarChart3, ArrowRight, Sparkles, Target, Zap } from "lucide-react";
+import { BookOpen, Brain, Layers, BarChart3, ArrowRight, Sparkles, Target, Zap, Hash, Headphones, FileText } from "lucide-react";
 import { useProgress } from "./hooks/useProgress";
 import lessons from "./data/lessons";
 import LessonCard from "./components/LessonCard";
@@ -14,6 +14,27 @@ const features = [
     description: "Bite-sized lessons with vocabulary, grammar, and examples.",
     color: "bg-blue-50 text-blue-600",
     href: "/lesson",
+  },
+  {
+    icon: Hash,
+    title: "Alphabet",
+    description: "Learn the German alphabet A–Z with Arabic pronunciation.",
+    color: "bg-primary-50 text-primary-600",
+    href: "/alphabet",
+  },
+  {
+    icon: Headphones,
+    title: "Pronunciation",
+    description: "Key pronunciation rules explained for Arabic speakers.",
+    color: "bg-secondary-50 text-secondary-600",
+    href: "/pronunciation",
+  },
+  {
+    icon: FileText,
+    title: "A1 Grammar",
+    description: "Essential grammar: pronouns, verbs, articles, and more.",
+    color: "bg-german-50 text-german-600",
+    href: "/grammar",
   },
   {
     icon: Brain,
@@ -148,7 +169,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (

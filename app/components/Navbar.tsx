@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { BookOpen, Brain, BarChart3, Layers, Menu, X } from "lucide-react";
+import { BookOpen, Brain, BarChart3, Layers, Menu, X, Hash, Headphones, FileText } from "lucide-react";
 
 const navItems = [
   { href: "/", label: "Home", icon: BookOpen },
   { href: "/lesson", label: "Lessons", icon: Layers },
+  { href: "/alphabet", label: "Alphabet", icon: Hash },
+  { href: "/pronunciation", label: "Pronunciation", icon: Headphones },
+  { href: "/grammar", label: "Grammar", icon: FileText },
   { href: "/vocabulary", label: "Vocabulary", icon: Brain },
   { href: "/quiz", label: "Quiz", icon: Brain },
   { href: "/progress", label: "Progress", icon: BarChart3 },
